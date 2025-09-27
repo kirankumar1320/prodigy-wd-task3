@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffe5b4;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 1rem;
+  background-color: #ffcc80;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cell {
+  background-color: #ffffff;
+  border: 2px solid #e65100;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell[data-value="X"] {
+  color: #d32f2f;
+  background-color: #ffebee;
+}
+
+.cell[data-value="O"] {
+  color: #1976d2;
+  background-color: #e3f2fd;
+}
+
+.cell:hover {
+  background-color: #ffe0b2;
+}
+
+.cell:focus {
+  outline: 3px solid #e65100;
+}
+
+.status-message {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  min-height: 1.5em;
+}
+
+#restart {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #e65100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restart:hover {
+  background-color: #bf360c;
+}
